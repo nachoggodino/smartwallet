@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="Comparar con:"
+        android:enabled="false"
+        android:checkable="false" />
+
+    <item
+        android:id="@+id/seven_days"
+        android:title="    7 días" />
+    <item
+        android:id="@+id/thirty_days"
+        android:title="    30 días" />
+    <item
+        android:id="@+id/year_days"
+        android:title="    365 días" />
+
+    <item
+        android:id="@+id/custom_days"
+        android:title="    Otro rango" />
+
+</menu>

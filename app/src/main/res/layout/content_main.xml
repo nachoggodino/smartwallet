@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                android:layout_above="@+id/username_tv"
+                android:textColor="@color/textLightGrey"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/username_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Nacho González"
+                android:textColor="@color/textDarkGrey"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo"
+                android:layout_above="@+id/username_tv"
+                android:textColor="@color/textDarkGrey"
+                android:textSize="12sp"
+                android:layout_gravity="end"
+                />
+
+            <TextView
+                android:id="@+id/total_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="1650.34 €"
+                android:textStyle="bold"
+                android:textColor="@color/textDarkGrey"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        style="@style/CustomCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/accounts_title"
+                style="@style/CardTitle"
+                android:text="Cuentas"
+                />
+
+            <ImageButton
+                android:id="@+id/pin_button_accounts"
+                style="@style/PinButton" />
+
+            <LinearLayout
+                android:id="@+id/accounts_layout"
+                android:layout_below="@+id/pin_button_accounts"
+                android:layout_centerHorizontal="true"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/accounts_first_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include
+                        android:id="@+id/first_account"
+                        layout="@layout/account_miniature"/>
+
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/second_account"/>
+
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/third_account"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/accounts_second_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/fourth_account"/>
+
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/fifth_account"/>
+
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/sixth_account" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/accounts_third_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/seventh_account"/>
+
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/eigth_account"/>
+
+                    <include
+                        layout="@layout/account_miniature"
+                        android:id="@+id/nineth_account" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accounts_layout"
+                android:text="Mantén pulsada una cuenta para ver más detalles."
+                android:textSize="12sp"
+                android:textColor="@color/textLightGrey"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        style="@style/CustomCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/CardTitle"
+                android:text="Ingresos vs Gastos"
+                />
+
+            <ImageButton
+                android:id="@+id/pin_button_1"
+                style="@style/PinButton" />
+
+            <TextView
+                android:id="@+id/income_expense_result_tv"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="408.52 €"
+                android:textColor="@color/textDarkGrey"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/income_result_tv"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/positiveGreen"
+                android:text="1 048.64 €"
+                android:drawableStart="@drawable/ic_arrow_drop_up_green_24dp"
+                android:drawablePadding="-6dp"/>
+
+            <TextView
+                android:id="@+id/expense_result_tv"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/income_result_tv"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/negativeRed"
+                android:text="640.12 €"
+                android:drawableStart="@drawable/ic_arrow_drop_down_red_24dp"
+                android:drawablePadding="-6dp"/>
+
+            <Button
+                android:id="@+id/dropdown_income_vs_expense"
+                android:text="en el mes actual"
+                style="@style/DropDownButton"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

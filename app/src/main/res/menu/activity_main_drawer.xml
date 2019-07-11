@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_category_white_24dp"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_accounts"
+            android:icon="@drawable/ic_bank_black_24dp"
+            android:title="Cuentas" />
+        <item
+            android:id="@+id/nav_expenses"
+            android:icon="@drawable/ic_bank_transfer_out_white_24dp"
+            android:title="Gastos" />
+        <item
+            android:id="@+id/nav_income"
+            android:icon="@drawable/ic_bank_transfer_in_white_24dp"
+            android:title="Ingresos" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_white_24dp"
+                android:title="Ajustes" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_android_white_24dp"
+                android:title="Acerca de SmartWallet" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_new_account"
+    android:background="@color/backgroundGrey">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="15dp">
+
+        <RelativeLayout
+            android:id="@+id/name_relative"
+            android:layout_alignParentTop="true"
+            style="@style/CreatorLayout">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:labelFor="@+id/name_edit"
+                android:text="Nombre de la cuenta"
+                style="@style/HintTextView" />
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_below="@+id/name_tv"
+                style="@style/CreatorEditText"
+                android:inputType="text"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/offset_linear"
+            android:orientation="horizontal"
+            android:layout_below="@+id/name_relative"
+            android:layout_marginTop="15dp"
+            style="@style/CreatorLayout"
+            android:gravity="center_vertical"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:id="@+id/offset_relative"
+                >
+
+                <TextView
+                    android:id="@+id/offset_tv"
+                    android:text="Saldo inicial"
+                    android:labelFor="@+id/offset_edit"
+                    style="@style/HintTextView" />
+
+                <EditText
+                    android:id="@+id/offset_edit"
+                    style="@style/CreatorEditText"
+                    android:layout_below="@+id/offset_tv"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:hint="0.0"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:id="@+id/icon_relative"
+                >
+
+                <TextView
+                    android:id="@+id/icon_tv"
+                    android:text="Icono"
+                    android:labelFor="@+id/icon_btn"
+                    style="@style/HintTextView" />
+
+
+                <ImageButton
+                    android:id="@+id/icon_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_bank_textgrey_24dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_below="@+id/icon_tv"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/offset_linear"
+            android:id="@+id/color_relative"
+            android:layout_marginTop="15dp"
+            style="@style/CreatorLayout">
+
+            <TextView
+                android:id="@+id/color_tv"
+                android:text="Color de la cuenta"
+                android:labelFor="@+id/color_picker"
+                style="@style/HintTextView" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/color_tv">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CustomCardView"
+                    android:id="@+id/color_picker"
+                    android:layout_width="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_height="24dp"
+                    android:layout_weight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/color_picker_button"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_arrow_drop_down_textgrey_24dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

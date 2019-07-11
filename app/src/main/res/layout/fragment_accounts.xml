@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.AccountsActivity$PlaceholderFragment"
+    android:backgroundTint="@color/backgroundGrey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/swipe_help"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@android:color/white"
+        android:elevation="2dp">
+
+        <ImageButton
+            android:id="@+id/prev_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_chevron_left_textgrey_24dp"
+            android:backgroundTint="@android:color/white"
+            android:layout_centerVertical="true"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:scaleType="centerInside"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/circle_shape"
+                android:id="@+id/title_image_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_bank_white_24dp"/>
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Nombre de la cuenta"/>
+
+        </LinearLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_chevron_right_textgrey_24dp"
+            android:backgroundTint="@android:color/white"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/white"
+        android:layout_below="@+id/swipe_help"
+        android:id="@+id/money_card"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        style="@style/CustomCardView"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Saldo total"
+                style="@style/CardTitle" />
+
+            <TextView
+                android:id="@+id/current_money"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 654.64 €"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/percentage_tv"
+                android:layout_above="@+id/dropdown_main"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+6,3%"
+                android:textSize="20sp"
+                android:textColor="@color/positiveGreen"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:id="@+id/dropdown_main"
+                style="@style/DropDownButton"
+                android:text="comparado con los 30 días anteriores"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/move_buttons_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/money_card">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="5dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/movement_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="Nuevo registro"
+                android:textColor="@color/white"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="5dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="Editar cuenta"
+                android:textColor="@color/white"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/last_moves_card"
+        style="@style/CustomCardView"
+        android:layout_below="@+id/move_buttons_linear"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/last_moves_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="Últimos movimientos"
+                android:textColor="@color/textDarkGrey"/>
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:layout_below="@id/last_moves_tv"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:orientation="horizontal"
+                android:background="@color/backgroundGrey"/>
+
+            <ListView
+                android:id="@+id/last_moves_listview"
+                android:layout_below="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.NewMovementActivity"
+    tools:showIn="@layout/activity_new_movement">
+
+    <com.ramotion.directselect.DSListView
+        android:id="@+id/ds_origin_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/backgroundGrey"
+        app:picker_box_view="@id/ds_origin_picker_box"
+        app:scale_animations="true"
+        android:elevation="4dp"
+        app:scale_animations_factor="1.3"
+        app:scale_animations_pivot_center="false"/>
+
+    <com.ramotion.directselect.DSListView
+        android:id="@+id/ds_destination_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGrey"
+        android:elevation="4dp"
+        android:visibility="invisible"
+        app:picker_box_view="@id/ds_destination_picker_box"
+        app:scale_animations="true"
+        app:scale_animations_factor="1.3"
+        app:scale_animations_pivot_center="false" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="30dp"
+        android:elevation="2dp"
+        android:paddingBottom="15dp">
+
+        <RelativeLayout
+            android:id="@+id/kind_relative"
+            android:layout_alignParentTop="true"
+            style="@style/CreatorLayout">
+
+            <com.llollox.androidtoggleswitch.widgets.ToggleSwitch
+                android:layout_below="@+id/switch_tv"
+                android:id="@+id/kind_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:toggleHeight="50dp"
+                app:textToggleLeft="Gasto"
+                app:textToggleCenter="Transferencia"
+                app:textToggleRight="Ingreso"
+                app:elevation="2dp"
+                app:checkedBackgroundColor="@color/colorAccent"
+                app:uncheckedBackgroundColor="@color/backgroundGrey"
+                app:uncheckedTextColor="@color/textLightGrey"
+
+                app:borderRadius="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/offset_relative"
+            android:layout_below="@id/kind_relative"
+            android:layout_marginTop="10dp"
+            style="@style/CreatorLayout">
+
+            <TextView
+                android:id="@+id/offset_tv"
+                android:text="Cantidad"
+                android:labelFor="@+id/offset_edit"
+                style="@style/HintTextView" />
+
+            <EditText
+                android:id="@+id/offset_edit"
+                android:focusable="false"
+                style="@style/CreatorEditText"
+                android:layout_below="@+id/offset_tv" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/CreatorLayout"
+            android:id="@+id/date_relative"
+            android:layout_below="@+id/offset_relative"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:text="Fecha"
+                android:labelFor="@+id/date_edit"
+                style="@style/HintTextView" />
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/date_edit"
+                style="@style/CreatorEditText"
+                android:layout_below="@+id/date_tv" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/accounts_relative"
+            style="@style/CreatorLayout"
+            android:layout_below="@+id/date_relative"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/origin_account_tv"
+                style="@style/HintTextView"
+                android:text="Cuenta origen"/>
+
+            <nachoapps.smartwallet.layout.AccountsSelectorPickerBox
+                android:id="@+id/ds_origin_picker_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/origin_account_tv"
+                android:layout_marginTop="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/destination_account_tv"
+                android:layout_below="@+id/ds_origin_picker_box"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="10dp"
+                style="@style/HintTextView"
+                android:text="Cuenta destino"/>
+
+            <nachoapps.smartwallet.layout.AccountsSelectorPickerBox
+                android:id="@+id/ds_destination_picker_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/destination_account_tv"
+                android:layout_marginTop="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/CreatorLayout"
+            android:id="@+id/description_relative"
+            android:layout_below="@+id/accounts_relative"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/description_tv"
+                android:text="Descripción"
+                style="@style/HintTextView" />
+
+            <EditText
+                android:id="@+id/description_edit"
+                style="@style/CreatorEditText"
+                android:layout_below="@+id/description_tv"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:hint="Escribe una descripción"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

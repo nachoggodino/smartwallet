@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="calcDialogStyle">@style/CalculatorDialogStyle</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.DatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="CardTitle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textColor">@color/textDarkGrey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomCardView" parent="Base.CardView">
+        <item name="cardCornerRadius">5dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="DropDownButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textColor">@color/textLightGrey</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:drawableLeft">@drawable/ic_arrow_drop_down_textgrey_24dp</item>
+    </style>
+
+    <style name="DropDownButton.White">
+        <item name="android:drawableLeft">@drawable/ic_arrow_drop_down_white_24dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="PinButton">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:src">@drawable/ic_unpin_textgrey_20dp</item>
+    </style>
+
+
+    <style name="CreatorLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+    </style>
+
+    <style name="HintTextView">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textLightGrey</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CreatorEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SpinnerListItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AccountCardView" parent="Base.CardView">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="cardCornerRadius">5dp</item>
+    </style>
+
+    <style name="CalculatorDialogStyle" parent="CalcDialogStyle">
+        <item name="calcDialogButtonStyle">@style/CalculatorButtonStyle</item>
+    </style>
+
+    <style name="CalculatorButtonStyle" parent="CalcDialogButtonStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="new_account" type="id"/>
+    <item name="new_income" type="id"/>
+    <item name="new_expense" type="id"/>
+    <item name="new_transfer" type="id"/>
+    <item name="new_category" type="id"/>
+</resources>

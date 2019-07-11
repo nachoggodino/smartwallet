@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp">
+
+    <LinearLayout
+        android:id="@+id/delete_linear"
+        android:orientation="horizontal"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:background="@color/negativeRed"
+        style="@style/Base.Widget.AppCompat.Button.Borderless">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/delete_button"
+            android:src="@drawable/ic_delete_white_24dp"
+            android:backgroundTint="@color/negativeRed"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        style="@style/Base.Widget.AppCompat.Button.Borderless">
+
+        <ImageView
+            android:id="@+id/circular_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bank_white_24dp"
+            android:background="@drawable/circle_shape"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+
+            />
+
+        <TextView
+            android:id="@+id/item_name_tv"
+            android:layout_toEndOf="@id/circular_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:text="Cuenta cualquiera"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/textDarkGrey"/>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/item_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="25dp"
+            android:text="1 708.44 €"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textLightGrey"/>
+
+    </RelativeLayout>
+
+
+
+</com.daimajia.swipe.SwipeLayout>

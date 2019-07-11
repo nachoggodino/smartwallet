@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    style="@style/Base.Widget.AppCompat.Button.Borderless">
+
+    <RelativeLayout
+        android:id="@+id/icons_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_shape"
+            android:id="@+id/from_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bank_white_24dp"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/from_image_view"
+            android:id="@+id/arrow_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_forward_black_24dp"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:layout_toEndOf="@+id/arrow_icon"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/circle_shape"
+            android:id="@+id/to_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_android_white_24dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/description_textview"
+        android:layout_below="@+id/titles_textview"
+        android:layout_toEndOf="@+id/icons_relative"
+        android:layout_marginStart="5dp"
+        android:text="Burger del domingo pasado"
+        android:textColor="@color/textLightGrey"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/titles_textview"
+        android:layout_centerVertical="true"
+        android:text="De Santander a Deuda Papá"
+        android:textColor="@color/textDarkGrey"
+        android:textSize="12sp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/icons_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/money_textview"
+        android:text="175.67 €"
+        android:textStyle="bold"
+        android:textColor="@color/textDarkGrey"
+        android:textSize="16sp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/date_textview"
+        android:layout_above="@+id/money_textview"
+        android:text="mié. 26 de feb. 2018"
+        android:textColor="@color/textLightGrey"
+        android:textSize="12sp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
